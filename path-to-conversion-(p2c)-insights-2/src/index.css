@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+:root {
+  --background: #F6F7F4;
+  --surface: #FFFFFF;
+  --surface-subtle: #F0F2EE;
+
+  --text-primary: #18201E;
+  --text-secondary: #56615D;
+  --text-muted: #7D8782;
+  --text-table: #35413D;
+
+  --border: #DCE2DE;
+  --border-strong: #C8D0CB;
+  --border-hover: #9BA8A1;
+  --border-subtle: #E4E8E5;
+
+  --primary: #087F73;
+  --primary-hover: #06695F;
+  --primary-active: #05554D;
+  --primary-subtle: #E8F5F2;
+  --primary-filter-border: #87C5BA;
+
+  --accent: #C87818;
+  --accent-subtle: #FFF5E5;
+
+  --success: #38764A;
+  --success-subtle: #EDF6EF;
+  --warning: #A86612;
+  --warning-subtle: #FFF6E8;
+  --error: #B54848;
+  --error-subtle: #FDF0F0;
+
+  --chart-grid: #E4E8E5;
+  --chart-axis: #7D8782;
+  --chart-axis-strong: #56615D;
+  --chart-title: #18201E;
+  --chart-tooltip-bg: #18201E;
+  --chart-tooltip-text: #FFFFFF;
+  --chart-tooltip-secondary: #CDD5D1;
+}
+
+@layer base {
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--background);
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Tabular figures for numerical metrics and KPI data */
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Restrained analytical components */
+.p2c-card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(24, 32, 30, 0.02);
+}
+
+.p2c-card-subtle {
+  background-color: var(--surface-subtle);
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+}
+
+/* Custom analytical input range matching Google AI Studio parameter slider */
+input[type="range"].lookback-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  background: #DCE2DE;
+  border-radius: 9999px;
+  height: 4px;
+  outline: none;
+  cursor: pointer;
+}
+
+input[type="range"].lookback-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ECEEEB;
+  border: 2px solid #8A948F;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(24, 32, 30, 0.12);
+  transition: transform 0.1s ease, border-color 0.1s ease;
+}
+
+input[type="range"].lookback-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.08);
+  border-color: #56615D;
+}
+
+input[type="range"].lookback-slider::-webkit-slider-thumb:active {
+  transform: scale(1.12);
+  border-color: #18201E;
+}
+
+input[type="range"].lookback-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ECEEEB;
+  border: 2px solid #8A948F;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(24, 32, 30, 0.12);
+}
+
+/* Subtle scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-hover);
+}

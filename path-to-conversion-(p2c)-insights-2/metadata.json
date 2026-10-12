@@ -1,0 +1,6 @@
+{
+  "name": "P2C Insights",
+  "description": "P2C Insights provides deterministic Path-to-Conversion journey analysis, multi-touch attribution, structured Gemini analytics, and automated Google Slides report generation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
